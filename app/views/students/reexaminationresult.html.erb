@@ -1,0 +1,41 @@
+<% provide(:title, "自主招生查询系统－初试查询") %>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span4">
+      <%= render :partial => 'menu' %>
+    </div><!--/span-->
+    <div class="span8">
+      <div class="widget stacked">
+            <div class="widget-header">
+              <h3>个人信息：</h3>
+            </div>
+            <div class="widget-content">
+              <p>身份证号：<%= @current_user[:id_num] %></p>
+              <p>姓名：<%= @current_user[:name] %></p>
+            </div>
+      </div>
+      <div class="widget stacked">
+      <div class="widget-header">
+        <h3>复试结果：</h3>
+      </div>
+      <div class="widget-content">
+        <% if @current_user.re_examination_result %>
+          <p>复试成绩：<%= number_with_precision(@current_user.re_examination_result[:score],0) %></p>
+          <p>同学您好：
+          <p><%= @current_user.re_examination_result[:result] %></p>
+          <p><center><%= link_to '查看预录取分数线', reexaminationline_path %></center></p>
+        <% else %>
+          <p>无结果记录</p>
+        <% end %>
+      </div>
+      </div>
+    </div><!--/span-->
+
+
+  </div><!--/row fluid-->
+
+
+
+</div>
+
+

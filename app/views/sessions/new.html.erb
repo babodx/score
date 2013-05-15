@@ -1,0 +1,39 @@
+<% provide(:title, "自主招生查询系统－登录") %>
+<% flash.each do |key, value| %>
+  <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+<% end %>
+<div class="container-fluid">
+<div class="row-fluid">
+
+<div class="span5">
+<%= form_for(:session, url: sessions_path) do |f| %>
+  <div class="login-fields">
+  <h2 class="form-signin-heading">请登录后查询信息与成绩</h2>
+    <div class="field">
+      <label for="username">身份证号：</label>
+      <%= f.text_field :id_num,class: "login username-field", placeholder: "身份证号"%>
+    </div>
+    <!--/field -->
+    <div class="field">
+      <label for="password">密码：</label>
+    <%= f.password_field :password, class: "login password-field", placeholder: "密码"%>
+    </div>
+    <!--/filed-->
+  </div>
+  <!--/login-fields -->
+  <div class="login-actions">
+  <%= f.submit "登录", class: "button btn btn-primary btn-large" %>
+  </div>
+  <!--/actions-->
+<% end %>
+</div>
+<div class="span7">
+  <h2>查询说明:</h2>
+  <p>考生通过注册时的身份证号和密码登录后，可以查询自己的信息与成绩</p>
+  <p>推荐采用chrome、firefox或者IE10 浏览器,访问本系统</p>
+  <p>如有问题，可拨打咨询电话<%= telphone %>
+</div>
+</div>
+</div>
+
+

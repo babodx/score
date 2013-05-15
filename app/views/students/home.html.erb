@@ -1,0 +1,27 @@
+<% provide(:title, "自主招生查询系统－学生") %>
+<div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span4">
+          <%= render :partial => 'menu' %>
+        </div><!--/span-->
+        <div class="span8">
+          <div class="widget stacked">
+            <div class="widget-header">
+              <h3>同学你好：</h3>
+            </div>
+
+            <div class="widget-content">
+            <p>你的身份证号：<%= @current_user[:id_num] %></p>
+            <p>姓名：<%= @current_user[:name] %></p>
+            <p>欢迎报考我院，请点击左侧菜单中的“初试查询”和“复试查询”来查看自己的考试成绩和最终结果。
+          </div>
+          </div>
+        </div><!--/span-->
+
+
+      </div><!--/row fluid-->
+
+
+
+</div>
+

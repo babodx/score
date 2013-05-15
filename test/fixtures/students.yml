@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id_num: MyString
+  name: MyString
+  ksh: MyString
+  password: MyString
+
+two:
+  id_num: MyString
+  name: MyString
+  ksh: MyString
+  password: MyString
